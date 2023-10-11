@@ -1,28 +1,21 @@
-/*
- * File: 0-holberton.c
- * Auth: Brennan D Baraban
- *
- */
-
 #include "holberton.h"
 
 /**
- * main - Prints "Holberton" followed by a new line.
+ * main - Print holberton word
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
-	_putchar('H');
-	_putchar('o');
-	_putchar('l');
-	_putchar('b');
-	_putchar('e');
-	_putchar('r');
-	_putchar('t');
-	_putchar('o');
-	_putchar('n');
-	_putchar('\n');
+	char message[] = "Holberton";
+	int count = 0;
 
+	while (message[count] != '\0')
+	{
+		_putchar(message[count]);
+		count++;
+	}
+	_putchar('\n');
 	return (0);
 }
