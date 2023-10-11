@@ -1,27 +1,31 @@
 #include <stdio.h>
 
-
 /**
-  * main - the main printing funtion
-  * less than 4000000.
-  * Return: 0.
-  */
-
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
 
 int main(void)
 {
-	int i = 0;
-	long j = 1, k = 2, sum = k;
+	int first, second, c, next;
 
+	first = 1;
+	second = 2;
+	c = 2;
 
-	while (k + j < 4000000)
+	next = first + second;
+	while (next  < 4000000)
 	{
-		k += j;
-		if (k % 2 == 0)
-		sum += k;
-		j = k - j;
-		++i;
+		next = first + second;
+		first = second;
+		second = next;
+		if (next % 2 == 0)
+		{
+			c = c + next;
+		}
 	}
-	printf("%ld", sum);
+	printf("%d", c);
+	printf("\n");
 	return (0);
 }
